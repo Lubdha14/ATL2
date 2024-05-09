@@ -1,5 +1,4 @@
 # Bricks Game Ruby on Rails... 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -180,7 +179,10 @@
 </body>
 </html>
 
+
+
 # (Ruby on rail)Password Generator
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -254,7 +256,6 @@
     <button onclick="generatePassword()">Generate Password</button><br>
     <input type="text" id="password" readonly>
   </div>
-
   <script>
     function generatePassword() {
       const length = document.getElementById('length').value;
