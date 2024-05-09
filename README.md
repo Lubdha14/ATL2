@@ -1,4 +1,5 @@
-# ATL2 Bricks Game Ruby on Rails... 
+# Bricks Game Ruby on Rails... 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,9 +192,8 @@
     </script>
 </body>
 </html>
----------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------Password Generator
+
+# (Ruby on rail)Password Generator
 <!DOCTYPE html>
 <html lang="en">
 <head>
