@@ -23,7 +23,6 @@
 </head>
 <body>
     <canvas id="gameCanvas" width="480" height="320"></canvas>
-
     <script>
         // JavaScript code for Block Breaker game
         const canvas = document.getElementById("gameCanvas");
@@ -65,7 +64,6 @@
                 leftPressed = true;
             }
         }
-
         function keyUpHandler(e) {
             if (e.key === "Right" || e.key === "ArrowRight") {
                 rightPressed = false;
@@ -73,7 +71,6 @@
                 leftPressed = false;
             }
         }
-
         // Collision detection between ball and bricks
         function collisionDetection() {
             for (let c = 0; c < brickColumnCount; c++) {
@@ -97,7 +94,6 @@
                 }
             }
         }
-
         // Draw the ball
         function drawBall() {
             ctx.beginPath();
@@ -106,7 +102,6 @@
             ctx.fill();
             ctx.closePath();
         }
-
         // Draw the paddle
         function drawPaddle() {
             ctx.beginPath();
@@ -115,7 +110,6 @@
             ctx.fill();
             ctx.closePath();
         }
-
         // Draw the bricks
         function drawBricks() {
             for (let c = 0; c < brickColumnCount; c++) {
@@ -134,14 +128,12 @@
                 }
             }
         }
-
         // Draw the score
         function drawScore() {
             ctx.font = "16px Arial";
             ctx.fillStyle = "#0095DD";
             ctx.fillText("Score: " + score, 8, 20);
         }
-
         // End the game
         function endGame() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -151,7 +143,6 @@
             ctx.fillText("Congratulations! You win!", canvas.width / 2, canvas.height / 2);
             ctx.fillText("Score: " + score, canvas.width / 2, canvas.height / 2 + 30);
         }
-
         // Main game loop
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -160,7 +151,6 @@
             drawPaddle();
             drawScore();
             collisionDetection();
-
             // Ball movement
             x += dx;
             y += dy;
@@ -176,17 +166,14 @@
                     endGame();
                 }
             }
-
             // Paddle movement
             if (rightPressed && paddleX < canvas.width - paddleWidth) {
                 paddleX += 7;
             } else if (leftPressed && paddleX > 0) {
                 paddleX -= 7;
             }
-
             requestAnimationFrame(draw);
         }
-
         // Start the game
         draw();
     </script>
